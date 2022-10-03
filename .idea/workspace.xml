@@ -5,8 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0ce8e1a6-14c2-4c6a-962b-53d6145f6a61" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/groupeonepoint/MainTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/groupeonepoint/domain/Frame.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/groupeonepoint/domain/IncorrectFrameValueException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/groupeonepoint/domain/FrameTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
@@ -20,6 +21,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="JUnit5 Test Class" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -57,7 +59,7 @@
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "preferences.pluginManager"
+    "settings.editor.selected.configurable": "reference.projectsettings.compiler.annotationProcessors"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -65,10 +67,42 @@
       <recent name="" />
     </key>
     <key name="CreateTestDialog.RecentsKey">
+      <recent name="com.groupeonepoint.domain" />
       <recent name="com.groupeonepoint" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="JUnit.FrameTest">
+    <configuration name="FrameTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="OnePoint-BowlingScore" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.groupeonepoint.domain.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.groupeonepoint.domain" />
+      <option name="MAIN_CLASS_NAME" value="com.groupeonepoint.domain.FrameTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="FrameTest.itShouldThrowIfTriesValuesAreIncorrect" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="OnePoint-BowlingScore" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.groupeonepoint.domain.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.groupeonepoint.domain" />
+      <option name="MAIN_CLASS_NAME" value="com.groupeonepoint.domain.FrameTest" />
+      <option name="METHOD_NAME" value="itShouldThrowIfTriesValuesAreIncorrect(int,int)" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="MainTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="OnePoint-BowlingScore" />
       <extension name="coverage">
@@ -86,6 +120,8 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.FrameTest" />
+        <item itemvalue="JUnit.FrameTest.itShouldThrowIfTriesValuesAreIncorrect" />
         <item itemvalue="JUnit.MainTest" />
       </list>
     </recent_temporary>
@@ -99,7 +135,7 @@
       <option name="presentableId" value="Default" />
       <updated>1664747762930</updated>
       <workItem from="1664747765706" duration="681000" />
-      <workItem from="1664750469913" duration="176000" />
+      <workItem from="1664750469913" duration="5063000" />
     </task>
     <servers />
   </component>
