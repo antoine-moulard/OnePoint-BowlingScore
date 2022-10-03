@@ -7,10 +7,12 @@ A Kata realized for an interview at OnePoint.
 You will need:
 
 - Java 17, if you are using an IDE like IntelliJ don't forget to target this version in "Project Structure".
-- Maven
+- Maven, make sure it can run with Java 17. Check with `$ mvn --version`.
 - Lombok. Do not forget to [enable annotation processing for your IDE](https://www.baeldung.com/lombok-ide).
 
 This project use Junit and AssertJ for tests.
+
+> **You can run basic E2E tests with different inputs in MainTest.**
 
 ## Problem Description
 
@@ -26,12 +28,12 @@ I think you’ll see that improvements like those above would go in readily if t
 We can briefly summarize the scoring for this form of bowling:
 
 * Each game, or “line” of bowling, includes ten turns, or “frames” for the bowler.
-* In each frame, the bowler gets up to two tries to knock down all the pins.
-* If in two tries, he fails to knock them all down, his score for that frame is the total number of pins knocked down
+* in each frame, the bowler gets up to two tries to knock down all the pins.
+* if in two tries, he fails to knock them all down, his score for that frame is the total number of pins knocked down
   in his two tries.
-* If in two tries he knocks them all down, this is called a “spare” and his score for the frame is ten plus the number
+* if in two tries he knocks them all down, this is called a “spare” and his score for the frame is ten plus the number
   of pins knocked down on his next throw (in his next turn).
-* If on his first try in the frame he knocks down all the pins, this is called a “strike”. His turn is over, and his
+* if on his first try in the frame he knocks down all the pins, this is called a “strike”. his turn is over, and his
   score for the frame is ten plus the simple total of the pins knocked down in his next two rolls.
 * If he gets a spare or strike in the last (tenth) frame, the bowler gets to throw one or two more bonus balls,
   respectively. These bonus throws are taken as part of the same turn. If the bonus throws knock down all the pins, the
