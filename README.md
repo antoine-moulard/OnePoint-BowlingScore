@@ -12,6 +12,16 @@ You will need:
 
 This project use Junit and AssertJ for tests.
 
+## Usage
+
+You can use the main class and method; you may want to configure your IDE to insert arguments in parameter.
+
+Example of valid input:
+
+- `"51 42 3- 5- 41 5/ 45 -- -- --"` (as one argument)
+- `51 42 3- 5- 41 5/ 45 -- -- --` (as several arguments)
+  Both should return the same result.
+
 > **You can run basic E2E tests with different inputs in MainTest.**
 
 ## Problem Description
