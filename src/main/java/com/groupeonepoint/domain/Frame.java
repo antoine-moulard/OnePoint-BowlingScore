@@ -45,6 +45,16 @@ public record Frame(int firstRoll, int secondRoll, FrameType frameType) {
         return new Frame(firstTry, secondTry, type);
     }
 
+    private static FrameType determineFrameType(int firstRoll, int secondRoll) {
+        if (firstRoll == MAX_PINS) {
+            return FrameType.STRIKE;
+        } else if (firstRoll + secondRoll == MAX_PINS) {
+            return FrameType.SPARE;
+        } else {
+            return FrameType.NORMAL;
+        }
+    }
+
     public static Frame createStrike() {
         return new Frame(10, 0, FrameType.STRIKE);
     }
@@ -57,18 +67,12 @@ public record Frame(int firstRoll, int secondRoll, FrameType frameType) {
         return new Frame(0, 0, FrameType.NORMAL);
     }
 
-    private static FrameType determineFrameType(int firstRoll, int secondRoll) {
-        if (firstRoll == MAX_PINS) {
-            return FrameType.STRIKE;
-        } else if (firstRoll + secondRoll == MAX_PINS) {
-            return FrameType.SPARE;
-        } else {
-            return FrameType.NORMAL;
-        }
+    public boolean isStrike() {
+        return this.frameType == FrameType.STRIKE;
     }
 
-    private int calculateScore() {
-        return this.firstRoll + this.secondRoll;
+    public boolean isSpare() {
+        return this.frameType == FrameType.SPARE;
     }
 
     /**
@@ -81,6 +85,10 @@ public record Frame(int firstRoll, int secondRoll, FrameType frameType) {
      */
     public int calculateScore(@NonNull List<Frame> nextFrames) {
         return this.calculateScore() + calculateBonus(nextFrames);
+    }
+
+    private int calculateScore() {
+        return this.firstRoll + this.secondRoll;
     }
 
     private int calculateBonus(List<Frame> nextFrames) {
@@ -105,13 +113,5 @@ public record Frame(int firstRoll, int secondRoll, FrameType frameType) {
 
     private int calculateBonusForSpares(List<Frame> nextFrames) {
         return nextFrames.stream().limit(1).map(Frame::firstRoll).reduce(0, Integer::sum);
-    }
-
-    public boolean isStrike() {
-        return this.frameType == FrameType.STRIKE;
-    }
-
-    public boolean isSpare() {
-        return this.frameType == FrameType.SPARE;
     }
 }
