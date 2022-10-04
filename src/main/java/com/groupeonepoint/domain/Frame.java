@@ -9,7 +9,7 @@ public record Frame(int firstRoll, int secondRoll, FrameType frameType) {
     private final static int MAX_PINS = 10;
     private final static int MIN_PINS = 0;
 
-    private enum FrameType {
+    public enum FrameType {
         STRIKE,
         SPARE,
         NORMAL
