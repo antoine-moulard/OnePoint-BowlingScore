@@ -1,12 +1,12 @@
 package com.groupeonepoint.domain;
 
-import lombok.Getter;
+import lombok.Data;
 
 import java.util.List;
 import java.util.Objects;
 import java.util.stream.IntStream;
 
-@Getter
+@Data
 public class Line {
     private final static int MAX_TURNS_IN_GAME = 10;
     private final static int MAX_TURNS_FOR_LAST_ROLL_WITH_SPARE_OR_STRIKE_BONUS = 11;
