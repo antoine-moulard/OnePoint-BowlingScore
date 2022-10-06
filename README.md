@@ -1,6 +1,6 @@
 # Bowling Score
 
-A Kata realized for an interview at OnePoint.
+A Kata realized for fun.
 
 ## Prerequisite
 
