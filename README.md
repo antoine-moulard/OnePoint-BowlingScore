@@ -1,7 +1,5 @@
 # Bowling Score
 
-A Kata realized for fun.
-
 ## Prerequisite
 
 You will need:
